@@ -1,0 +1,28 @@
+body {
+	background-color: red;
+}
+
+.mycol {
+	border: 3px dotted blue !important;
+}
+
+#footer {
+	background-color : #343A40;
+}
+
+#body {
+	border: 3px solid black;
+}
+
+#title {
+	font-size: 2em;
+}
+
+footer {
+	color: white;
+	font-size: 0.8em;
+}
+
+#lptitle {
+	font-size: 2em;
+}
