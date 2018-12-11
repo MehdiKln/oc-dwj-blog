@@ -41,7 +41,7 @@ class ChaptersManager extends Manager {
 
     public function updatePost($title, $content, $postId) {
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('UPDATE posts SET title = ?, content = ?, update_date = NOW() WHERE id = ?');
+        $req = $bdd->prepare('UPDATE post SET title = ?, content = ?, update_date = NOW() WHERE id = ?');
         $updated = $req->execute(array($title, $content, $postId));
         
         return $updated;
@@ -49,7 +49,7 @@ class ChaptersManager extends Manager {
 
     public function deletePost($postId) {
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('DELETE FROM posts WHERE id = ?');
+        $req = $bdd->prepare('DELETE FROM post WHERE id = ?');
         $deletedPost = $req->execute(array($postId));
 
         return $deletedPost;

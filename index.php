@@ -21,6 +21,15 @@
         elseif ($_GET['action'] == 'show') {
             show();
         }
+        elseif ($_GET['action'] == 'deletePost') {
+            deletePost();
+        }
+        elseif ($_GET['action'] == 'editPost') {
+            displayUpdate();
+        }
+        elseif ($_GET['action'] == 'submitUpdate') {
+            submitUpdate($_POST['title'], $_POST['content'], $_GET['id']);
+        }
         elseif (isset($_GET['new-post']) &&  $_GET['new-post'] == 'success') {
             echo '<p id="success">L\'article a bien été posté !<p>';
         }

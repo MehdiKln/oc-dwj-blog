@@ -27,27 +27,29 @@ function newPost() {
 		
 }
 
-function submitUpdate($title, $content, $postId) {
-	$chaptersManager = new ChaptersManager();
-	
-	$updated = $chaptersManager->updatePost($title, $content, $postId);
-
-	Header('Location: index.php?action=admin&update-status=success');
-}
-
 function displayUpdate() {
-	$chaptersManager = new ChaptersManager();
 
-	$post = $chaptersManager->getPost($_GET['id']);
-	require('view/backend/updatePostView.php');
+    $ChaptersManager = new ChaptersManager();
+    $post = $postManager->findWithId($_GET['id']);
+
+    require('view/backend/updatePostView.php');
 }
 
-function removePost($postId) {
-	$chaptersManager = new ChaptersManager();
+function submitUpdate($title, $content, $postId) 
+{
+    $ChaptersManager = new ChaptersManager();
+    $updated = $postManager->updatePost($title, $content, $postId);
 
-	$deletedPost = $chaptersManager->deletePost($postId);
+    Header('Location: index.php?action=admin&update-status=success');
+}
 
-	Header('Location: index.php?action=admin&remove-post=success');
+
+function deletePost($id)
+{    
+    $ChaptersManager = new ChaptersManager(); 
+    $deletedPost = $ChaptersManager->deletePost($id);
+
+    Header('Location: index.php?action=admin&remove-post=success');
 }
 
 ?>
