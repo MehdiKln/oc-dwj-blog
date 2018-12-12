@@ -32,10 +32,10 @@
             submitUpdate($_POST['title'], $_POST['content'], $_GET['id']);
         }
         elseif ($_GET['action'] == 'addComment') {
-            addComment();
+            addComment($_GET["id"], $_POST["content"]);
         }
         elseif ($_GET['action'] == 'deleteComment') {
-            removeComment($_GET['id']);
+            deleteComment($_GET['id']);
         }
         elseif (isset($_GET['new-post']) &&  $_GET['new-post'] == 'success') {
             echo '<p id="success">L\'article a bien été posté !<p>';

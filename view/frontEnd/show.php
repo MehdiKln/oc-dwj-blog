@@ -8,7 +8,7 @@
 
 		<div class="container-fluid">
 			<div class="row pt-4">
-				<div class="col-12" align="center" id="title">
+				<div class="col-2 ml-2" align="center" id="chapters_title">
 			 		<?= $post["title"]; ?> 
 			 	</div>
 			 </div>
@@ -19,48 +19,51 @@
 			 	</div>
 			 </div>
 
-			 <div class="row mt-4">
-			 	<div class="col">
-			 		<?=$post["creation_date_fr"];?>
-			 	</div>
-			 </div>
 
 <!-- MODIFICATION / SUPPRESSION POST -->
 
-			 <div class="row mt-4 mb-5">
-			 	<div class="col-12">
+			 <div class="row mt-4 mb-5 p-2">
+			 	<div class="col d-inline-flex p-2">
 			 		<form method="post" action="index.php?action=editPost&amp;id=<?= $post['id']; ?>">
 			 			<button type="submit" class="btn-info"> Modifier <i class="fas fa-edit"></i> </button>
 			 		</form>
 			 		<form method="post" action="index.php?action=deletePost&amp;id=<?= $post['id']; ?>">
-			 			<button type="submit" class="btn-danger pull-right"> Supprimer <i class="fas fa-trash"></i> </button>
+			 			<button type="submit" class="btn-danger"> Supprimer <i class="fas fa-trash"></i> </button>
 			 		</form>
 			 	</div>
 			 </div>
 
 <!-- POST COMMENTAIRE --> 
 
-		<div id="commentForm">
-			<p>N'hésitez pas à me laisser un commentaire ! ;)</p>
+		<div class="row mb-3" id="commentForm">
+			<div class="col-2 ml-2" id="commentaires_titre" align="center">
+			Commentaires
+			</div>
+		</div>
+
 			<form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
-				<label for="comment">Commentaire :</label></br>
+				<label for="comment">N'hésitez pas à rédiger un commentaire si vous le souhaitez :</label></br>
 				<textarea id="comment" name="content" row="15" cols="100"></textarea> 
 				<br>
-				<button type="submit"> Envoyer </button>
+				<button type="submit" class="btn-success"> Envoyer </button>
 			</form>
 		</div>
 
 <!-- AFFICHAGE COMMENTAIRES / SUPPRESSION COMMENTAIRES-->
 			 <div class="row mt-4 mb-5">
-			 	<div class="col">
+			 	<div class="col-4 ml-3">
 			 		<?php
       					foreach ($listComments as $comment)
         				{
 					?>
-					      
+					    <div id=comments_display>
 					      <p><?= nl2br(htmlspecialchars($comment['content'])) ?></p>
-					      <p><?= nl2br(htmlspecialchars($comment['firstname'])) ?></p>
-					      <p><?= nl2br(htmlspecialchars($comment['creation_date_fr'])) ?></p>
+					      <p id="name"><?= nl2br(htmlspecialchars($comment['firstname'])) ?></p>
+					      <form method="post" action="index.php?action=deleteComment&amp;id=<?= $comment['id']; ?>">
+			 			  	<button type="submit" class="btn-danger"> Supprimer <i class="fas fa-trash"></i> </button>
+			 			  </form>
+					  	</div>
+
 					<?php
         				}
 					?>

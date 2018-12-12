@@ -1,5 +1,5 @@
 body {
-	background-color: red;
+	
 }
 
 .mycol {
@@ -14,8 +14,24 @@ body {
 	border: 3px solid black;
 }
 
+#chapters_title {
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color : #343A40;
+	color: white;
+	padding: 5px;
+}
+
 #title {
 	font-size: 2em;
+}
+
+.fastpres {
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color : #343A40;
+	color: white;
+	padding: 5px;
 }
 
 footer {
@@ -25,4 +41,29 @@ footer {
 
 #lptitle {
 	font-size: 2em;
+}
+
+button {
+	margin-right: 5px;
+}
+
+#commentaires_titre {
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color : #343A40;
+	color: white;
+	padding: 5px;
+}
+
+#comments_display {
+	background-color: #96999b;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 8px;
+	margin-bottom : 10px;
+}
+
+#name {
+	color : #365899;
+	margin-bottom: 4px;
 }

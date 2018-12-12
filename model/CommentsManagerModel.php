@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once("ManagerConnect.php");
 
@@ -12,10 +12,10 @@ class CommentsManager extends Manager {
         return $req->fetchAll();
     }
 
-    public function postComment($content)
+    public function postComment($post_id, $content)
     {
         $db = $this->dbConnect();
-        $comment = $db->prepare('INSERT INTO comment(content, post_id, user_id, created_at) VALUES(?, ?, 2, NOW())');
+        $comment = $db->prepare('INSERT INTO comment (content, post_id, user_id, created_at) VALUES("'. $content .'", '. $post_id .', 2, NOW())');
         $newComment = $comment->execute(array($content));
 
         return $newComment;
@@ -24,7 +24,7 @@ class CommentsManager extends Manager {
     public function deleteComment($id) {
         $db = $this->dbConnect();
         $req = $db->prepare('DELETE FROM comment WHERE id = ?');
-        $deletedComment = $req->execute(array($commentId));
+        $deletedComment = $req->execute(array($id));
 
         return $deletedComment;
     }

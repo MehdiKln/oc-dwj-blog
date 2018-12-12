@@ -23,35 +23,46 @@
 	<div class="container-fluid">
 		<div class="row pt-5 mx-3 justify-content-between">
 			<div class="col-lg-8 col-md-12 mb-3" id="body">
-				Présentation du projet :  </br></br></br>
+				<br>
+				<span class="fastpres"> Présentation du projet  </span>  </br></br>
 				
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor congue lacinia. Suspendisse lacinia, sem vitae gravida congue, enim sapien lobortis turpis, vel lacinia mauris quam et lorem. Fusce auctor enim mauris, suscipit dignissim tellus mollis ac. Suspendisse sed vehicula risus. Sed varius, ex nec tristique pulvinar, felis nisl lacinia dui, nec lacinia diam nisl ut tellus. Integer eleifend mattis aliquet. Sed erat velit, vulputate nec pretium sed, blandit in justo. Fusce fermentum pellentesque condimentum. Aliquam venenatis, diam vel rhoncus fringilla, neque libero varius ligula, non fermentum sapien velit nec justo. Morbi molestie, risus ut cursus molestie, felis lorem imperdiet magna, non gravida quam metus non ligula. Nunc sed nulla placerat, varius eros sed, interdum purus.</br></br>
-
-				Sed ante nunc, dapibus id gravida sit amet, imperdiet quis odio. Maecenas suscipit fringilla erat, eu varius quam pellentesque eget. Donec purus leo, convallis eu dictum pretium, laoreet ac odio. Aliquam gravida, felis vitae fermentum rutrum, dolor tortor laoreet ipsum, vel elementum ligula tellus ac massa. Ut non leo volutpat, fringilla metus sed, imperdiet urna. Etiam imperdiet diam ut quam porta maximus. Curabitur ac pretium purus. Fusce a varius dolor. Nullam feugiat vitae ipsum sit amet eleifend. Donec elementum enim tincidunt, faucibus tortor non, hendrerit augue. Sed posuere nulla ac mi venenatis, et vestibulum urna egestas. In blandit lectus ex, ut porttitor risus tempus a. Ut euismod erat nec quam tincidunt, non rutrum elit consectetur. Mauris eleifend lobortis maximus. Suspendisse potenti. Phasellus eu nulla metus.</br></br>
-
-				Aliquam vel egestas ante. Suspendisse aliquam enim eget libero aliquet fringilla. Nam malesuada ipsum vel purus pellentesque lacinia. Sed sed 	dictum nunc, quis interdum urna. Ut semper neque erat, sit amet cursus urna efficitur quis. Cras congue placerat turpis. Donec a ante ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi bibendum pulvinar nunc eget tincidunt. Donec vitae rutrum libero.</br></br>
-
-				Donec nec nunc ligula. Cras in mauris et sapien eleifend hendrerit sed at nibh. Etiam non lorem ultricies lectus fringilla dictum non eget quam. Integer euismod rhoncus justo. Integer aliquam erat gravida, consequat purus eget, porttitor justo. Etiam sit amet sagittis dui, non condimentum erat. Nulla consectetur, massa vel faucibus lobortis, ligula dolor bibendum purus, ut interdum tortor leo sit amet lacus. Nullam venenatis, felis vel dapibus fermentum, nisi urna imperdiet lacus, sit amet accumsan libero purus a ipsum.
+				Depuis quelques temps maintenant, j'ai commencé l'écriture de mon nouveau roman "Billet simple pour l'Alaska".
+				Cependant, j'ai voulu innover en publiant mon roman sur mon blog. <br>
+				Le fonctionnement est très simple, je publie régulièrement par "épisode", des petits chapitres de mon roman.
+				<br><br>
+				"Toujours aussi proche de ses lecteurs et à leur écoute, Jean Forteroche a décidé cette année de publier son livre directement en ligne, en offrant à ses fans un nouveau chapitre par semaine. Ne manquez donc pas le fil des aventures de ses personnages, et plongez dès à présent dans le monde du mystère et des découvertes !"
+				<br><br>
+				<span class="fastpres"> Description du Roman </span>
+				<br><br>
+				Une île sauvage du sud de l'Alaska, accessible uniquement par bateau ou par hydravion, tout en forêts humides et montagnes escarpées.<br>
+				C'est dans ce décor que Jim décide d'emmener son fils de treize ans pour y vivre dans une cabane isolée, une année durant. 
+				Après une succession d'échecs personnels, il voit là l'occasion de prendre un nouveau départ et de renouer avec ce garçon qu'il connaît si mal.<br>
+				<br><br>
+				Mais la rigueur de cette vie et les défaillances du père ne tardent pas à; transformer ce séjour en cauchemar, et la situation devient vite incontrôlable. <br>
+				Jusqu'au drame violent et imprévisible qui scellera leur destin. 
 
 			</div>
 
 			<div class="col-lg-3 col-md-12 mb-3" id="body">
-				Présentation de l'auteur : </br></br></br>
+				<br>
+				<span class="fastpres"> Présentation de l'auteur  </span></br></br>
 
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor congue lacinia. Suspendisse lacinia, sem vitae gravida congue, enim sapien lobortis turpis, vel lacinia mauris quam et lorem. Fusce auctor enim mauris, suscipit dignissim tellus mollis ac. Suspendisse sed vehicula risus. Sed varius, ex nec tristique pulvinar, felis nisl lacinia dui, nec lacinia diam nisl ut tellus. Integer eleifend mattis aliquet. Sed erat velit, vulputate nec pretium sed, blandit in justo. Fusce fermentum pellentesque condimentum. Aliquam venenatis, diam vel rhoncus fringilla, neque libero varius ligula, non fermentum sapien velit nec justo. Morbi molestie, risus ut cursus molestie, felis lorem imperdiet magna, non gravida quam metus non ligula. Nunc sed nulla placerat, varius eros sed, interdum purus.</br></br>
+				Jean Forteroche est né en 1966 sur l'île Adak, en Alaska, et y a passé une partie de son enfance avant de s'installer en France avec sa mère et sa sœur. 
+				Il a rédigé son premier roman LES NAUFRAGES lors d'un voyage en mer.
+				Après avoir parcouru plus de 40 000 milles sur les océans, il échoue lors de sa tentative de tour du monde en solitaire sur un trimaran qu'il a dessiné et construit lui-même.
+				En 2013, il publie LE DERNIER MILE récit de son propre naufrage dans les Caraïbes lors de son voyage de noces quelques années plus tôt. 
+				Ce livre fait partie de la liste des best-sellers du Figaro. Publié en France en janvier 2010, LES NAUFRAGES remporte immédiatement un immense succès. Il remporte le prix Médicis et s'est vendu à plus de 300 000 exemplaires.
+				</br></br>
+				Porté par son succès, Jean Forteroche est aujourd'hui traduit en dix-huit langues dans plus de soixante pays. Une adaptation cinématographique par une société de production française est en cours.
 			</div>
 
 		</div>
 
 		<div class="row mx-3 pt-5 mb-3" id="lastpost">
-			<div class="col-12 py-2" align="center" id="body">
-			 	
-			<span id="lptitle"> <?= $lastPost["title"]; ?> </span> </br></br>
-			 <?= $lastPost["content"];?></br></br>
-			 <?=$lastPost["created_at"];?></br>
-
-			  
-
+			<div class="col-12 py-2 pt-3" id="body">
+				<span class="fastpres"> <?= $lastPost["title"]; ?> </span> </br></br>
+				<?= $lastPost["content"];?></br></br>
+			 	<span id="datetime"> <?=$lastPost["created_at"];?> </span> </br>
 			</div>
 		</div>
 	</div>
