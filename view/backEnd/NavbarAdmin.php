@@ -1,4 +1,7 @@
-<?php /* session_start() */ ?>
+<?php  if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } ?>
 
 <div class="container-fluid">
 		<div class="row">
@@ -18,16 +21,16 @@
          					Chapitres
         				</a>
 		        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		        				<?php /* 
-		        				   $_SESSION["dropdown"] = $listTitles; 
+		        				<?php 
+		        				   $listTitles = $_SESSION["dropdown"];
 							      foreach ($listTitles as $listTitle)
-							        { ?> <a class="dropdown-item" href="index.php?action=show&amp;id=<?= $listTitle['id']; ?>"> <?= nl2br(htmlspecialchars($listTitle['title'])) ?></a> */ ?>
+							        { ?> <a class="dropdown-item" href="index.php?action=show&amp;id=<?= $listTitle['id']; ?>"> <?= nl2br(htmlspecialchars($listTitle['title'])) ?></a>
 
-							    <?php /* } */ ?> 
-
+							    <?php  }  ?> 
+<!--
 							    <a class="dropdown-item" href="index.php?action=show&id=2">Chapitre 1</a>
 							    <a class="dropdown-item" href="index.php?action=show&id=3">Chapitre 2</a>
-							    <a class="dropdown-item" href="index.php?action=show&id=4">Chapitre 3</a>
+							    <a class="dropdown-item" href="index.php?action=show&id=4">Chapitre 3</a> -->
 
 		          			<div class="dropdown-divider"></div>
 		          				

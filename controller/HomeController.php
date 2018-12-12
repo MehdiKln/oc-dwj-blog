@@ -16,19 +16,8 @@
 	function saveChaptersTitlesOnSession()
 	{
 		 $ChaptersManager = new ChaptersManager(); 
-    	 $findWithId = $ChaptersManager->findWithId($id); 
-    	 $_SESSION["dropdown"] = $findWithId;
+    	 $getPosts = $ChaptersManager->getPosts(); 
+    	 $_SESSION["dropdown"] = $getPosts;
     	 
 
-      	 /* foreach ($listPosts as $listPost)
-         { 
-        	
-?>
-	      <p><?= nl2br(htmlspecialchars($listPost['title'])) ?></p>
-	      <p><?= nl2br(htmlspecialchars($listPost['id'])) ?></p>
-
-			<?php
-         }
-
-
-	*/ }		?>
+    }		

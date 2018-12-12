@@ -1,28 +1,28 @@
 <?php 
 
-require_once("Manager.php");
+require_once("ManagerConnect.php");
 
 class CommentsManager extends Manager {
 
-    public function getComments()
+    public function getComments($post_id)
     {
-        $db = dbConnect();
-        $req = $db->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
+        $db = $this->dbConnect();
+        $req = $db->query('SELECT comment.id, content, user_id, firstname, STR_TO_DATE(created_at, "%d/%m/%Y à %H%i%s") AS creation_date_fr FROM comment INNER JOIN user ON comment.user_id=user.id ORDER BY creation_date_fr DESC');
 
         return $req->fetchAll();
     }
 
-    public function postComment($postId, $author, $comment)
+    public function postComment($content)
     {
-        $bdd = $this->dbConnect();
-        $comment = $db->prepare('INSERT INTO comment(title, content, user_id, created_at) VALUES(?, ?, ?, NOW())');
-        $affectedLines = $comments->execute(array($postId, $author, $comment));
+        $db = $this->dbConnect();
+        $comment = $db->prepare('INSERT INTO comment(content, post_id, user_id, created_at) VALUES(?, ?, 2, NOW())');
+        $newComment = $comment->execute(array($content));
 
-        return $affectedLines;
+        return $newComment;
     }
 
-    public function deleteComment($commentId) {
-        $bdd = $this->dbConnect();
+    public function deleteComment($id) {
+        $db = $this->dbConnect();
         $req = $db->prepare('DELETE FROM comment WHERE id = ?');
         $deletedComment = $req->execute(array($commentId));
 

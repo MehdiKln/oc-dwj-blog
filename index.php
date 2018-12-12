@@ -4,6 +4,7 @@
     require_once("controller/ChaptersController.php");
     require_once("controller/AuthorController.php");
     require_once("controller/AdminController.php");
+    require_once("controller/CommentsController.php");
 
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'chapitres') {
@@ -22,7 +23,7 @@
             show();
         }
         elseif ($_GET['action'] == 'deletePost') {
-            deletePost();
+            deletePost($_GET['id']);
         }
         elseif ($_GET['action'] == 'editPost') {
             displayUpdate();
@@ -30,10 +31,17 @@
         elseif ($_GET['action'] == 'submitUpdate') {
             submitUpdate($_POST['title'], $_POST['content'], $_GET['id']);
         }
+        elseif ($_GET['action'] == 'addComment') {
+            addComment();
+        }
+        elseif ($_GET['action'] == 'deleteComment') {
+            removeComment($_GET['id']);
+        }
         elseif (isset($_GET['new-post']) &&  $_GET['new-post'] == 'success') {
             echo '<p id="success">L\'article a bien été posté !<p>';
         }
     }
+
     else {
         home();
     }

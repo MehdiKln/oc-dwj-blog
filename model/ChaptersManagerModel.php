@@ -8,7 +8,7 @@ class ChaptersManager extends Manager {
     public function getPosts()
     {
         $db = $this->dbConnect();
-        $req = $db->query('SELECT id, title, content, DATE_FORMAT(created_at, "%d/%m/%Y %Hh%imin%ss") AS creation_date_fr FROM post ORDER BY creation_date_fr DESC');
+        $req = $db->query('SELECT id, title, content, STR_TO_DATE(created_at, "%d/%m/%Y %H%i%s") AS creation_date_fr FROM post ORDER BY creation_date_fr DESC');
 
         return $req->fetchAll();
     }
@@ -16,7 +16,7 @@ class ChaptersManager extends Manager {
     public function findWithId($id)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('SELECT id, title, content, DATE_FORMAT(created_at, "%d/%m/%Y %Hh%imin%ss") AS creation_date_fr FROM post WHERE id = ? ORDER BY creation_date_fr DESC');
+        $req = $db->prepare('SELECT id, title, content, STR_TO_DATE(created_at, "%d/%m/%Y %H%i%s") AS creation_date_fr FROM post WHERE id = ? ORDER BY creation_date_fr DESC');
         $req->bindParam(1, $id, PDO::PARAM_INT);
         $req->execute();
 
@@ -39,18 +39,18 @@ class ChaptersManager extends Manager {
         return $newPost;
     }
 
-    public function updatePost($title, $content, $postId) {
-        $bdd = $this->dbConnect();
-        $req = $bdd->prepare('UPDATE post SET title = ?, content = ?, update_date = NOW() WHERE id = ?');
-        $updated = $req->execute(array($title, $content, $postId));
+    public function updatePost($title, $content, $id) {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE post SET title = ?, content = ?, updated_at = NOW() WHERE id = ?');
+        $updated = $req->execute(array($title, $content, $id));
         
         return $updated;
     }
 
-    public function deletePost($postId) {
-        $bdd = $this->dbConnect();
-        $req = $bdd->prepare('DELETE FROM post WHERE id = ?');
-        $deletedPost = $req->execute(array($postId));
+    public function deletePost($id) {
+        $db = $this->dbConnect();
+        $req = $db->prepare('DELETE FROM post WHERE id = ?');
+        $deletedPost = $req->execute(array($id));
 
         return $deletedPost;
     }

@@ -9,7 +9,7 @@ function viewDashboard()
 		// var_dump($_POST["title"]); die;
 
 
-   require('view/frontEnd/DashBoardView.php');
+   require('view/backEnd/DashBoardView.php');
 }
 
 function newPost() {
@@ -30,7 +30,7 @@ function newPost() {
 function displayUpdate() {
 
     $ChaptersManager = new ChaptersManager();
-    $post = $postManager->findWithId($_GET['id']);
+    $post = $ChaptersManager->findWithId($_GET['id']);
 
     require('view/backend/updatePostView.php');
 }
@@ -38,7 +38,7 @@ function displayUpdate() {
 function submitUpdate($title, $content, $postId) 
 {
     $ChaptersManager = new ChaptersManager();
-    $updated = $postManager->updatePost($title, $content, $postId);
+    $updated = $ChaptersManager->updatePost($title, $content, $postId);
 
     Header('Location: index.php?action=admin&update-status=success');
 }
@@ -47,7 +47,7 @@ function submitUpdate($title, $content, $postId)
 function deletePost($id)
 {    
     $ChaptersManager = new ChaptersManager(); 
-    $deletedPost = $ChaptersManager->deletePost($id);
+    $ChaptersManager->deletePost($id);
 
     Header('Location: index.php?action=admin&remove-post=success');
 }

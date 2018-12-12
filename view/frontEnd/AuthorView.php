@@ -6,4 +6,4 @@ Présentation de l'auteur.
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require("AdminTemplate.php") ?>
+<?php require("/../backEnd/AdminTemplate.php") ?>

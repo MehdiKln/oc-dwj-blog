@@ -7,19 +7,22 @@ function chapters()
     $ChaptersManager = new ChaptersManager(); 
     $listPosts = $ChaptersManager->getPosts(); 
 
-   require('view/frontEnd/chaptersView.php');
+   require('view/frontEnd/dashboard.php');
 }
 
 function show()
 {   
     $ChaptersManager = new ChaptersManager(); 
-    $post = $ChaptersManager->findWithId($_GET['id']); 
+    $post = $ChaptersManager->findWithId($_GET['id']);
+
+    $CommentsManager = new CommentsManager(); 
+    $listComments = $CommentsManager->getComments($post["id"]); 
         
     if ($post === null) {
         throw new \Exception("Pas de Post");
     }
 
-    require("view/frontEnd/show.php");
+    require("view/frontEnd/Show.php");
 
 }
 
