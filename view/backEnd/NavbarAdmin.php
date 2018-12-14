@@ -42,6 +42,12 @@
 					       	 	<a class="nav-link" href="index.php?action=dashboard"> Admin </a>
 					      	</li>
 			    	</ul>
+			    	<span class="navbar-text">
+				      <a class="nav-link" href="index.php?action=display_logIn"> Se connecter </a> 
+				    </span>
+				    <span class="navbar-text">
+				    	<a class="nav-link" href="index.php?action=display_addMember"> S'inscrire </a>
+					</span>
 			  	</div>
 			</nav>
 		</div>
