@@ -1,5 +1,18 @@
-body {
-	
+@font-face {
+	font-family: "expressway";
+	src: url('../fonts/expressway.ttf');
+}
+
+body {	
+}
+
+.home_title {
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color : #343A40;
+	color: white;
+	padding: 10px;
+	font-family: "expressway";
 }
 
 .mycol {
@@ -66,4 +79,21 @@ button {
 #name {
 	color : #365899;
 	margin-bottom: 4px;
+}
+
+#author_presentation { 
+	border: 3px solid black;
+	background-color: #838487;
+}
+
+.home_windows {
+	background-color: #838487;
+}
+
+.gras {
+	font-weight: bold;
+}
+
+#author_section {
+	margin-bottom: 150px;
 }

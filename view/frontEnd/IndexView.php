@@ -5,16 +5,16 @@
  ?>
 
 	<div class="container-fluid">
-		<div class="row pt-4">
+		<div class="row pt-4 mt-3">
 			<div class="col-12" id="title" align="center">
-				Billet simple pour l'Alaska
+				<h1> <span class="home_title">Billet simple pour l'Alaska </span></h1>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row mb-4">
 			<div class="col-7">
 			</div>
 			<div class="col-5">
-				Jean Forteroche
+				par Jean Forteroche
 			</div>	
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 
 	<div class="container-fluid">
 		<div class="row pt-5 mx-3 justify-content-between">
-			<div class="col-lg-8 col-md-12 mb-3" id="body">
+			<div class="col-lg-8 col-md-12 mb-3 home_windows" id="body">
 				<br>
 				<span class="fastpres"> Présentation du projet  </span>  </br></br>
 				
@@ -38,12 +38,12 @@
 				C'est dans ce décor que Jim décide d'emmener son fils de treize ans pour y vivre dans une cabane isolée, une année durant. 
 				Après une succession d'échecs personnels, il voit là l'occasion de prendre un nouveau départ et de renouer avec ce garçon qu'il connaît si mal.<br>
 				<br><br>
-				Mais la rigueur de cette vie et les défaillances du père ne tardent pas à; transformer ce séjour en cauchemar, et la situation devient vite incontrôlable. <br>
+				Mais la rigueur de cette vie et les défaillances du père ne tardent pas à transformer ce séjour en cauchemar, et la situation devient vite incontrôlable. <br>
 				Jusqu'au drame violent et imprévisible qui scellera leur destin. 
 
 			</div>
 
-			<div class="col-lg-3 col-md-12 mb-3" id="body">
+			<div class="col-lg-3 col-md-12 mb-3" id="author_presentation">
 				<br>
 				<span class="fastpres"> Présentation de l'auteur  </span></br></br>
 
@@ -58,8 +58,9 @@
 
 		</div>
 
-		<div class="row mx-3 pt-5 mb-3" id="lastpost">
-			<div class="col-12 py-2 pt-3" id="body">
+		<div class="row mx-3 pt-5 mb-5" id="lastpost">
+			<div class="col-12 py-2 pt-3 home_windows" id="body">
+				<span class="fastpres"> Dernier chapitre publié </span> </br></br>
 				<span class="fastpres"> <?= $lastPost["title"]; ?> </span> </br></br>
 				<?= $lastPost["content"];?></br></br>
 			 	<span id="datetime"> <?=$lastPost["created_at"];?> </span> </br>
