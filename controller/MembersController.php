@@ -53,7 +53,7 @@ function addMember()
 function getMembers()
 {
 	$mailconnect = htmlspecialchars($_POST['mailconnect']);
-   	$passconnect = password_hash($_POST['passconnect']);
+   	$passconnect = password_hash($_POST['passconnect'], PASSWORD_DEFAULT);
 
    	$MembersManager = new MembersManager();
    	$requser = $MembersManager->getMembers($mailconnect, $passconnect, $getid);

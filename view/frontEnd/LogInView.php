@@ -7,9 +7,9 @@
 		<div class="col mt-5 mb-5">
 			<form action="index.php?action=loginSubmit" method="post">
 			<label for="mail">Adresse email</label><br />
-			<input type="email" name="mail" id="mail" required /><br><br>
+			<input type="email" name="mailconnect" id="mailconnect" required /><br><br>
 			<label for="pass">Mot de passe</label><br />
-			<input type="password" name="pass" id="pass" required /><br></br>
+			<input type="password" name="passconnect" id="passconnect" required /><br></br>
 			<input type="submit" value="Se connecter" />
 			</form><br>
 			<a href="index.php?action=display_addMember">Pas encore inscrit? C'est par ici ;)</a>
