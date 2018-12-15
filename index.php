@@ -46,20 +46,7 @@ if(!isset($_SESSION))
             display_addMember();
         }
         elseif ($_GET['action'] == 'addMember') {
-            if (!empty($_POST['firstname']) && !empty($_POST['name']) && !empty($_POST['pass']) && !empty($_POST['pass']) && !empty($_POST['mail'])) {
-                    if(filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
-                          if($_POST['pass'] == $_POST['pass']) {
-                             addMember();
-                             $reussite = "Votre compte a bien été créé ! <a href=\"index.php/action=display_logIn\">Me connecter</a>";
-                          } else {
-                             $erreur = "Vos mots de passes ne correspondent pas !";
-                          }
-                    } else {
-                       $erreur = "Votre adresse mail n'est pas valide !";
-                    }
-            } else {
-              $erreur = "Tous les champs doivent être complétés !";
-              }
+            addMember();
         } 
         elseif ($_GET['action'] == 'display_logIn') {
             display_loginView();

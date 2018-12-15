@@ -22,13 +22,13 @@ class MembersManager extends Manager {
         return $reqmail;
     }
 
-    public function getMembers($mailconnect, $passconnect, $getid)
+    public function getMembers($mailconnect, $passconnect)
     {
         $db = $this->dbConnect();
-        $requser = $db->prepare("SELECT * FROM user WHERE mail = ? AND pass = ? AND id = ?");
-        $requser->execute(array($mailconnect, $passconnect, $getid));
+        $requser = $db->prepare("SELECT * FROM user WHERE mail = ? AND pass = ?");
+        $requser->execute(array($mailconnect, $passconnect));
 
-        return $requser;
+        return $requser->fetchAll();
     }
 }
 
