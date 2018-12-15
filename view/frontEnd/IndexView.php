@@ -1,10 +1,25 @@
-
 <?php 
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+
 	$title = "Bienvenue sur le site de Jean Forteroche"; 
  	ob_start(); 
  ?>
 
 	<div class="container-fluid">
+		<div class ="row mt-3">
+			<div class="col-12">
+				<?php
+         			if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id']) {
+         		?>
+				Bienvenue <?php echo '<font color="green">'.$userinfo['mail']."</font>"; ?> <a href="index.php?action=logOut"> Déconnexion </a>
+				<?php 
+				} 
+				?>
+			</div>
+		</div>
 		<div class="row pt-4 mt-3">
 			<div class="col-12" id="title" align="center">
 				<h1> <span class="home_title">Billet simple pour l'Alaska </span></h1>

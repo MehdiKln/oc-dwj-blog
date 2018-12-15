@@ -21,6 +21,15 @@ class MembersManager extends Manager {
 
         return $reqmail;
     }
+
+    public function getMembers($mailconnect, $passconnect, $getid)
+    {
+        $db = $this->dbConnect();
+        $requser = $db->prepare("SELECT * FROM user WHERE mail = ? AND pass = ? AND id = ?");
+        $requser->execute(array($mailconnect, $passconnect, $getid));
+
+        return $requser;
+    }
 }
 
 ?>

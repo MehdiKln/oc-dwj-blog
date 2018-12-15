@@ -9,9 +9,10 @@
 			<label for="mail">Adresse email</label><br />
 			<input type="email" name="mail" id="mail" required /><br><br>
 			<label for="pass">Mot de passe</label><br />
-			<input type="password" name="pass" id="pass" required /></br>
+			<input type="password" name="pass" id="pass" required /><br></br>
 			<input type="submit" value="Se connecter" />
-			</form>
+			</form><br>
+			<a href="index.php?action=display_addMember">Pas encore inscrit? C'est par ici ;)</a>
 		</div>
 	</div>
 </div>

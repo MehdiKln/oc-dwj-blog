@@ -95,9 +95,13 @@ button {
 }
 
 #author_section {
-	margin-bottom: 150px;
+	margin-bottom: 200px;
 }
 
 #signup_section {
-	margin-bottom: 250px;
+	margin-bottom: 300px;
+}
+
+#login_section {
+	margin-bottom: 520px;
 }

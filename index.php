@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 
     require_once("controller/HomeController.php");
     require_once("controller/ChaptersController.php");
@@ -59,6 +63,16 @@
         } 
         elseif ($_GET['action'] == 'display_logIn') {
             display_loginView();
+        }
+        elseif ($_GET['action'] == 'loginSubmit') {
+            if(!empty($_POST['mail']) AND !empty($_POST['pass'])) {
+              getMembers();
+            } else {
+                $erreur = "Tous les champs doivent être complétés !";
+            }
+        }
+        elseif ($_GET['action'] == 'logOut') {
+            logOut();
         }
         elseif (isset($_GET['new-post']) &&  $_GET['new-post'] == 'success') {
             echo '<p id="success">L\'article a bien été posté !<p>';
