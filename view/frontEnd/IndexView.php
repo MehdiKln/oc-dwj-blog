@@ -11,13 +11,9 @@ if(!isset($_SESSION))
 	<div class="container-fluid">
 		<div class ="row mt-3">
 			<div class="col-12">
-				<?php
-         			if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id']) {
-         		?>
-				Bienvenue <?php echo '<font color="green">'.$userinfo['mail']."</font>"; ?> <a href="index.php?action=logOut"> Déconnexion </a>
-				<?php 
-				} 
-				?>
+				<?php if(isset($_SESSION['id'])) { ?>
+      			Bienvenue <?php echo '<font color="green">'.$_SESSION['firstname']."</font>"; ?> <a href="index.php?action=logOut"> Déconnexion </a>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="row pt-4 mt-3">

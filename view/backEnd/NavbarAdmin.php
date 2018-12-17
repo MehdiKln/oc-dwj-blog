@@ -38,9 +38,13 @@
 			      		<li class="nav-item">
 			        		<a class="nav-link" href="index.php?action=author"> Auteur </a>
 			      		</li>
+			      		<?php
+							if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {
+						?>
 			      		<li class="nav-item">
-					       	 	<a class="nav-link" href="index.php?action=dashboard"> Admin </a>
-					      	</li>
+					       	<a class="nav-link" href="index.php?action=dashboard"> Admin </a>
+					    </li>
+					     <?php } ?>					   
 			    	</ul>
 			    	<span class="navbar-text">
 				      <a class="nav-link" href="index.php?action=display_logIn"> Se connecter </a> 

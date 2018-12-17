@@ -24,12 +24,26 @@ class MembersManager extends Manager {
 
     public function getMembers($mailconnect, $passconnect)
     {
-        $db = $this->dbConnect();
-        $requser = $db->prepare("SELECT * FROM user WHERE mail = ? AND pass = ?");
-        $requser->execute(array($mailconnect, $passconnect));
+      $db = $this->dbConnect();
 
-        return $requser->fetchAll();
+      $user = array();
+      $req = $db->prepare("SELECT * FROM user WHERE mail = ?");
+      $req->execute(array($mailconnect));
+
+      $result = $req->fetch();
+
+        if ($result && password_verify($passconnect, $result['password'])) {
+            $user = array(
+                  "id" => $result['id'],
+                  "firstname" => $result['firstname'],
+                  "name" => $result['name'],
+                  "mail" => $result['mail']
+            );
+        }
+
+      return $user;
     }
+
 }
 
 ?>

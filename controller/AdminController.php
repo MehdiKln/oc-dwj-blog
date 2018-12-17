@@ -8,6 +8,7 @@ function viewDashboard()
 	// if (isset($_POST["title"]) && isset($_POST["content"])) {
 		// var_dump($_POST["title"]); die;
 
+	// appel d'une fonction isAdmin(); == true ! si == false --> redirection 
 
    require('view/backEnd/DashBoardView.php');
 }

@@ -34,7 +34,7 @@ function addMember()
       $mail = htmlspecialchars($_POST['mail']);
       $pass = $_POST['pass'];
       $pass_confirm = $_POST['pass_confirm'];
-      $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+      
 
       $add = true;
       $messages = array();
@@ -60,6 +60,7 @@ function addMember()
             $mailexist = $reqmail->rowCount();
 
             if ($mailexist == 0) {
+                  $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
                   $newMember = $MembersManager->createMember($firstname, $name, $pass, $mail);
                   $messages[] = "Votre compte a bien été créé ! <a href='index.php?action=display_logIn'>Me connecter</a>";
             } else {
@@ -82,23 +83,24 @@ function addMember()
 
 function getMembers()
 {
-      $mailconnect = htmlspecialchars($_POST['mailconnect']);
-      $passconnect = password_hash($_POST['passconnect']);
+      $mailconnect = htmlspecialchars($_POST['mail']);
+      $passconnect = $_POST['pass'];
 
       $MembersManager = new MembersManager();
-      $userinfo = $MembersManager->getMembers($mailconnect, $passconnect);
-      $userexist = $userinfo->rowCount();
+      $requser = $MembersManager->getMembers($mailconnect, $passconnect);
 
-      if ($userexist == 1) {
-            $_SESSION['id'] = $userinfo['id'];
-            $_SESSION['firstname'] = $userinfo['firstname'];
-            $_SESSION['mail'] = $userinfo['mail'];
+      if (!empty($requser)) {
+            $_SESSION['id'] = $requser['id'];
+            $_SESSION['firstname'] = $requser['firstname'];
+            $_SESSION['mail'] = $requser['mail'];
+            $_SESSION['role'] = $requser['role'];
 
             header("Location: index.php");
       } else {
-            $erreur = "Mauvais mail ou mot de passe !";
+            $erreur = urlencode("Mauvais mail ou mot de passe !");
+            header("Location: index.php?action=display_logIn&erreur=" . $erreur);
       }
-}
+} 
 
 function logout()
 {

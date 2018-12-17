@@ -25,10 +25,10 @@
 			 <div class="row mt-4 mb-5 p-2">
 			 	<div class="col d-inline-flex p-2">
 			 		<form method="post" action="index.php?action=editPost&amp;id=<?= $post['id']; ?>">
-			 			<button type="submit" class="btn-info"> Modifier <i class="fas fa-edit"></i> </button>
+			 			<button type="submit" class="btn btn-info btn-sm"> Modifier <i class="fas fa-edit"></i> </button>
 			 		</form>
 			 		<form method="post" action="index.php?action=deletePost&amp;id=<?= $post['id']; ?>">
-			 			<button type="submit" class="btn-danger"> Supprimer <i class="fas fa-trash"></i> </button>
+			 			<button type="submit" class="btn btn-danger btn-sm"> Supprimer <i class="fas fa-trash"></i> </button>
 			 		</form>
 			 	</div>
 			 </div>
@@ -45,7 +45,7 @@
 				<label for="comment">N'hésitez pas à rédiger un commentaire si vous le souhaitez :</label></br>
 				<textarea id="comment" name="content" row="15" cols="100"></textarea> 
 				<br>
-				<button type="submit" class="btn-success"> Envoyer </button>
+				<button type="submit" class="btn btn-success btn-sm"> Envoyer </button>
 			</form>
 		</div>
 
@@ -60,7 +60,7 @@
 					      <p><?= nl2br(htmlspecialchars($comment['content'])) ?></p>
 					      <p id="name"><?= nl2br(htmlspecialchars($comment['firstname'])) ?></p>
 					      <form method="post" action="index.php?action=deleteComment&amp;id=<?= $comment['id']; ?>">
-			 			  	<button type="submit" class="btn-danger"> Supprimer <i class="fas fa-trash"></i> </button>
+			 			  	<button type="submit" class="btn btn-danger btn-sm"> Supprimer <i class="fas fa-trash"></i> </button>
 			 			  </form>
 					  	</div>
 
