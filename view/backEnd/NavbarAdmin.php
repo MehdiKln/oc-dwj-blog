@@ -45,13 +45,19 @@
 					       	<a class="nav-link" href="index.php?action=dashboard"> Admin </a>
 					    </li>
 					     <?php } ?>					   
-			    	</ul>
+			    	</ul> 
+			    	<?php if(isset($_SESSION["id"]) == null) { ?>  
 			    	<span class="navbar-text">
 				      <a class="nav-link" href="index.php?action=display_logIn"> Se connecter </a> 
 				    </span>
 				    <span class="navbar-text">
 				    	<a class="nav-link" href="index.php?action=display_addMember"> S'inscrire </a>
 					</span>
+				<?php } elseif(isset($_SESSION["id"])) { ?>
+					<span class="navbar-text">
+				      <a class="nav-link" href="index.php?action=logOut"> Se déconnecter </a> 
+				    </span>	
+				<?php } ?>
 			  	</div>
 			</nav>
 		</div>

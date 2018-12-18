@@ -73,7 +73,7 @@ button {
 	padding-left: 10px;
 	padding-top: 5px;
 	padding-bottom: 8px;
-	margin-bottom : 10px;
+	margin-bottom : 15px;
 }
 
 #name {
@@ -104,4 +104,29 @@ button {
 
 #login_section {
 	margin-bottom: 520px;
+}
+
+.admin_newpost {
+	margin-bottom: 150px;
+}
+
+.admin_home {
+	margin-bottom: 800px;
+}
+
+.admin_post {
+	margin-bottom: 700px;
+}
+
+.admin_signaled {
+	margin-bottom: 800px;
+}
+
+.h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color : #343A40;
+	color: white;
+	padding: 5px;
+	margin-left: 20px;
 }

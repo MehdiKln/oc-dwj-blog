@@ -33,12 +33,7 @@ class MembersManager extends Manager {
       $result = $req->fetch();
 
         if ($result && password_verify($passconnect, $result['password'])) {
-            $user = array(
-                  "id" => $result['id'],
-                  "firstname" => $result['firstname'],
-                  "name" => $result['name'],
-                  "mail" => $result['mail']
-            );
+            $user = $result;
         }
 
       return $user;

@@ -10,16 +10,17 @@ if(!isset($_SESSION))
     require_once("controller/AdminController.php");
     require_once("controller/CommentsController.php");
     require_once("controller/MembersController.php");
+    require_once("services/authentification.php");
 
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'chapitres') {
             chapters();
         }
         elseif ($_GET['action'] == 'author') {
-                author();
+            author();
         }
         elseif ($_GET['action'] == 'dashboard') {
-            viewDashboard();
+            adminCheck();
         }
         elseif ($_GET['action'] == 'submitPost') {
             newPost();                
@@ -37,10 +38,10 @@ if(!isset($_SESSION))
             submitUpdate($_POST['title'], $_POST['content'], $_GET['id']);
         }
         elseif ($_GET['action'] == 'addComment') {
-            addComment($_GET["id"], $_POST["content"]);
+            addComment($_GET["id"], $_POST["content"], $_SESSION['id']);
         }
         elseif ($_GET['action'] == 'deleteComment') {
-            deleteComment($_GET['id']);
+            deleteComment($_GET['id'], $_GET["post_id"]);
         }
         elseif ($_GET['action'] == 'display_addMember') {
             display_addMember();

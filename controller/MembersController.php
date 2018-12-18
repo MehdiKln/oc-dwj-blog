@@ -4,6 +4,7 @@ if (!isset($_SESSION)) {
 }
 
 require_once("model/MembersManager.php");
+require_once("services/authentification.php");
 
 function display_addMember()
 {
@@ -108,4 +109,16 @@ function logout()
       session_destroy();
 
       header('Location: index.php');
+}
+
+function isAdmin()
+{
+      $authentification = new authentification();
+      $authentification->isAdmin();
+}
+
+function adminCheck() 
+{
+      $authentification = new authentification();
+      $authentification->adminCheck();
 }
