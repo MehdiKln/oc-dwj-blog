@@ -39,6 +39,15 @@ class MembersManager extends Manager {
       return $user;
     }
 
+    public function countUser()
+    {   
+        $db = $this->dbConnect();
+        $req = $db->query('SELECT COUNT(*) AS nbr_users FROM user');
+        $results = $req->fetch();
+        $nbr_users = $results['nbr_users'];
+        return $nbr_users;
+    }
+
 }
 
 ?>

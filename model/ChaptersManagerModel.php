@@ -54,6 +54,17 @@ class ChaptersManager extends Manager {
 
         return $deletedPost;
     }
+
+    public function countPost()
+    {   
+        $db = $this->dbConnect();
+        $req = $db->query('SELECT COUNT(*) AS nbr_posts FROM post');
+        $results = $req->fetch();
+        $nbr_posts = $results['nbr_posts'];
+        return $nbr_posts;
+    }
+
+
 }
 
 ?>

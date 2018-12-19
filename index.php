@@ -11,6 +11,7 @@ if(!isset($_SESSION))
     require_once("controller/CommentsController.php");
     require_once("controller/MembersController.php");
     require_once("services/authentification.php");
+    require_once("controller/ReportController.php");
 
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'chapitres') {
@@ -42,6 +43,9 @@ if(!isset($_SESSION))
         }
         elseif ($_GET['action'] == 'deleteComment') {
             deleteComment($_GET['id'], $_GET["post_id"]);
+        }
+        elseif ($_GET['action'] == 'report') {
+            postReport($_GET['id'], $_GET['post_id'], $_SESSION['id']);
         }
         elseif ($_GET['action'] == 'display_addMember') {
             display_addMember();

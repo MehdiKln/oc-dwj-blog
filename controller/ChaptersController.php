@@ -7,7 +7,7 @@ function chapters()
     $ChaptersManager = new ChaptersManager(); 
     $listPosts = $ChaptersManager->getPosts(); 
 
-   require('view/frontEnd/dashboard.php');
+   require('view/backEnd/DashBoardView.php');
 }
 
 function show()

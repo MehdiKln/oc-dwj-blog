@@ -34,7 +34,7 @@ if ($add == 1) {
                   <br><br>
 
 			<?php foreach ($messages as $msg) {
-                        echo '<font color="' . $color . '">' . $msg . '</font><br>';
+                        echo '<span class="' . $color . '">' . $msg . '</span><br>';
                   } ?>
 		</div>
 	</div>

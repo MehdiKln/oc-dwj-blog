@@ -12,7 +12,7 @@ if(!isset($_SESSION))
 		<div class ="row mt-3">
 			<div class="col-12">
 				<?php if(isset($_SESSION['id'])) { ?>
-      			Bienvenue <?php echo '<font color="green">'.$_SESSION['firstname']."</font>"; ?> <a href="index.php?action=logOut"> Déconnexion </a>
+      			Bienvenue <?php echo '<span class="green">'.$_SESSION['firstname']."</span>"; ?> <a href="index.php?action=logOut"> [Déconnexion] </a>
 				<?php } ?>
 			</div>
 		</div>

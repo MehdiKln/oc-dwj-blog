@@ -15,6 +15,12 @@ body {
 	font-family: "expressway";
 }
 
+#admin_presentation {
+	font-family: "expressway";
+	font-size: 1.2em;
+
+}
+
 .mycol {
 	border: 3px dotted blue !important;
 }
@@ -106,6 +112,10 @@ button {
 	margin-bottom: 520px;
 }
 
+#edit_section {
+	margin-bottom: 115px;
+}
+
 .admin_newpost {
 	margin-bottom: 150px;
 }
@@ -129,4 +139,16 @@ button {
 	color: white;
 	padding: 5px;
 	margin-left: 20px;
+}
+
+#report_msg {
+	color: green;
+}
+
+.green {
+ 	color: green;
+}
+
+.red {
+	color: red;
 }

@@ -18,7 +18,7 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : null;
 			<a href="index.php?action=display_addMember">Pas encore inscrit? C'est par ici ;)</a>
 
                   <?php if ($erreur) {
-                        echo '<br><br><font color="red">' . $erreur . '</font>';
+                        echo '<br><br><span class="red">' . $erreur . '</span>';
                   } ?>
 		</div>
 	</div>
