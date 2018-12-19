@@ -16,7 +16,6 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : null;
 			<input type="submit" value="Se connecter" />
 			</form><br>
 			<a href="index.php?action=display_addMember">Pas encore inscrit? C'est par ici ;)</a>
-
                   <?php if ($erreur) {
                         echo '<br><br><span class="red">' . $erreur . '</span>';
                   } ?>

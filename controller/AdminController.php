@@ -1,14 +1,15 @@
-<?php  if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    }
+<?php  
+if(!isset($_SESSION)) 
+{ 
+session_start(); 
+}
 
- require_once("model/ChaptersManagerModel.php");
- require_once("model/ReportManager.php");
+require_once("model/ChaptersManagerModel.php");
+require_once("model/ReportManager.php");
 
 function viewDashboard()
-{	
-	$reportManager = new ReportManager();
+{   
+    $reportManager = new ReportManager();
     $reports = $reportManager->getReports();
 
     $ChaptersManager = new ChaptersManager();
@@ -22,17 +23,17 @@ function viewDashboard()
 
 function newPost() {
 
-	if (empty($_POST['title']) || empty($_POST['content'])) { 
-		// Redirection de l'utilisateur (Leave early)
-		Header('Location: index.php?action=dashboard'); 
-		exit();
-	}
+    if (empty($_POST['title']) || empty($_POST['content'])) { 
+        // Redirection de l'utilisateur (Leave early)
+        Header('Location: index.php?action=dashboard'); 
+        exit();
+    }
 
-	$chaptersManager = new ChaptersManager();
-	$newPost = $chaptersManager->createPost($_POST['title'], $_POST['content']);
+    $chaptersManager = new ChaptersManager();
+    $newPost = $chaptersManager->createPost($_POST['title'], $_POST['content']);
 
-	Header('Location: index.php?action=dashboard&new-post=success');
-		
+    Header('Location: index.php?action=dashboard&new-post=success');
+        
 }
 
 function displayUpdate() {

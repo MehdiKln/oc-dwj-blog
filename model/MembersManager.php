@@ -47,8 +47,6 @@ class MembersManager extends Manager {
         $nbr_users = $results['nbr_users'];
         return $nbr_users;
     }
-
 }
-
 ?>
 

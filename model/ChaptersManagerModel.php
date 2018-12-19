@@ -2,19 +2,16 @@
 
 require_once("ManagerConnect.php");
 
-
-class ChaptersManager extends Manager {
-
-    public function getPosts()
-    {
+class ChaptersManager extends Manager 
+{
+    public function getPosts() {
         $db = $this->dbConnect();
         $req = $db->query('SELECT id, title, content, STR_TO_DATE(created_at, "%d/%m/%Y %H%i%s") AS creation_date_fr FROM post ORDER BY creation_date_fr DESC');
 
         return $req->fetchAll();
     }
 
-    public function findWithId($id)
-    {
+    public function findWithId($id) {
         $db = $this->dbConnect();
         $req = $db->prepare('SELECT id, title, content, STR_TO_DATE(created_at, "%d/%m/%Y %H%i%s") AS creation_date_fr FROM post WHERE id = ? ORDER BY creation_date_fr DESC');
         $req->bindParam(1, $id, PDO::PARAM_INT);
@@ -55,16 +52,12 @@ class ChaptersManager extends Manager {
         return $deletedPost;
     }
 
-    public function countPost()
-    {   
+    public function countPost() {   
         $db = $this->dbConnect();
         $req = $db->query('SELECT COUNT(*) AS nbr_posts FROM post');
         $results = $req->fetch();
         $nbr_posts = $results['nbr_posts'];
         return $nbr_posts;
     }
-
-
 }
-
 ?>

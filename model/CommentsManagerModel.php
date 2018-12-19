@@ -29,7 +29,6 @@ class CommentsManager extends Manager {
 
         return $deletedComment;
     }
-
 }
 
 ?>

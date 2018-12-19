@@ -33,5 +33,3 @@ function deleteComment($id, $post_id)
             Header('Location: index.php?action=show&id=' . $post_id);
       }
 }
-
-?>

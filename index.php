@@ -66,13 +66,7 @@ if(!isset($_SESSION))
         elseif ($_GET['action'] == 'logOut') {
             logOut();
         }
-        elseif (isset($_GET['new-post']) &&  $_GET['new-post'] == 'success') {
-            echo '<p id="success">L\'article a bien été posté !<p>';
-        }
-    }
-
-    else {
+    } else {
         home();
     }
-
 ?> 

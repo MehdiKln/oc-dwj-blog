@@ -1,6 +1,6 @@
 <?php
 if (!isset($_SESSION)) {
-      session_start();
+session_start();
 }
 
 require_once("model/MembersManager.php");
@@ -8,24 +8,18 @@ require_once("services/authentification.php");
 
 function display_addMember()
 {
-
       require("view/frontEnd/SubscribeView.php");
-
 }
 
 function display_loginView()
 {
-
       require("view/frontEnd/LoginView.php");
-
 }
 
 function checkMail()
 {
       $MembersManager = new MembersManager();
-
       $MailValidity = $MembersManager->checkMail($mail);
-
 }
 
 function addMember()

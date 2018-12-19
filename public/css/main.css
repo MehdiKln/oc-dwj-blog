@@ -25,7 +25,7 @@ body {
 	border: 3px dotted blue !important;
 }
 
-#footer {
+.footer {
 	background-color : #343A40;
 }
 
@@ -132,6 +132,13 @@ button {
 	margin-bottom: 800px;
 }
 
+#admin_presentation {
+	background-color: #3d5166;
+	border: 3px solid black;
+	color: white;
+	padding: 30px;
+}
+
 .h3 {
 	font-size: 1.1em;
 	font-weight: bold;
@@ -151,4 +158,28 @@ button {
 
 .red {
 	color: red;
+}
+
+.panel-1 {
+	border-color: #5cb85c;
+  	color: white;
+  	background-color: #5cb85c;
+  	padding: 30px;
+  	border-radius: 5px 5px 5px 5px;
+}
+
+.panel-2 {
+	border-color: #337AB7;
+  	color: white;
+  	background-color: #337AB7;
+  	padding: 30px;
+  	border-radius: 5px 5px 5px 5px;
+}
+
+.panel-txt {
+	font-size: 1.4em;
+}
+
+.panel-numbers {
+	font-size: 2.5em;
 }

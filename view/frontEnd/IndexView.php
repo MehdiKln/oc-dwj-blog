@@ -1,12 +1,12 @@
 <?php 
 if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    }
+{ 
+    session_start(); 
+}
 
-	$title = "Bienvenue sur le site de Jean Forteroche"; 
- 	ob_start(); 
- ?>
+$title = "Bienvenue sur le site de Jean Forteroche"; 
+ob_start(); 
+?>
 
 	<div class="container-fluid">
 		<div class ="row mt-3">
@@ -66,7 +66,6 @@ if(!isset($_SESSION))
 				</br></br>
 				Porté par son succès, Jean Forteroche est aujourd'hui traduit en dix-huit langues dans plus de soixante pays. Une adaptation cinématographique par une société de production française est en cours.
 			</div>
-
 		</div>
 
 		<div class="row mx-3 pt-5 mb-5" id="lastpost">

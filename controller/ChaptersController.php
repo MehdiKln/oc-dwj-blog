@@ -2,14 +2,6 @@
 
 require_once('model/ChaptersManagerModel.php');
 
-function chapters()
-{ 
-    $ChaptersManager = new ChaptersManager(); 
-    $listPosts = $ChaptersManager->getPosts(); 
-
-   require('view/backEnd/DashBoardView.php');
-}
-
 function show()
 {   
     $ChaptersManager = new ChaptersManager(); 
@@ -23,7 +15,5 @@ function show()
     }
 
     require("view/frontEnd/Show.php");
-
 }
 
-?>
