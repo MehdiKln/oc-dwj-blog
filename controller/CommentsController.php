@@ -1,6 +1,6 @@
 <?php
 
-require_once('model/CommentsManagerModel.php');
+require_once('model/CommentsManager.php');
 
 function comments()
 {

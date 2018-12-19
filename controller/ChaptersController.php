@@ -1,6 +1,6 @@
 <?php
 
-require_once('model/ChaptersManagerModel.php');
+require_once('model/ChaptersManager.php');
 
 function show()
 {   

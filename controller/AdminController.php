@@ -4,7 +4,7 @@ if(!isset($_SESSION))
 session_start(); 
 }
 
-require_once("model/ChaptersManagerModel.php");
+require_once("model/ChaptersManager.php");
 require_once("model/ReportManager.php");
 
 function viewDashboard()
