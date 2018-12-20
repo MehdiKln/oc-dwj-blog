@@ -13,7 +13,7 @@ function display_addMember()
 
 function display_loginView()
 {
-      require("view/frontEnd/LoginView.php");
+      require("view/frontEnd/LogInView.php");
 }
 
 function checkMail()
@@ -97,12 +97,13 @@ function getMembers()
       }
 } 
 
-function logout()
+function logOut()
 {
       $_SESSION = array();
       session_destroy();
 
       header('Location: index.php');
+      exit;
 }
 
 function isAdmin()

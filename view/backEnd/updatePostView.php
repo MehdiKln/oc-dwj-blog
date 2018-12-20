@@ -23,4 +23,4 @@ $title = "Mise à jour du Post"; ?>
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('AdminTemplate.php'); ?>
+<?php require("view/backEnd/AdminTemplate.php"); ?>

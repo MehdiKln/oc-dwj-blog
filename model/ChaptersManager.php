@@ -4,14 +4,14 @@ require_once("ManagerConnect.php");
 
 class ChaptersManager extends Manager 
 {
-    public function getPosts() {
+    public function getPosts() { // Récupération des posts pour les afficher dans le dropdown
         $db = $this->dbConnect();
         $req = $db->query('SELECT id, title, content, STR_TO_DATE(created_at, "%d/%m/%Y %H%i%s") AS creation_date_fr FROM post ORDER BY creation_date_fr DESC');
 
         return $req->fetchAll();
     }
 
-    public function findWithId($id) {
+    public function findWithId($id) { // Récupération des posts en fonction de l'ID pour afficher la vue
         $db = $this->dbConnect();
         $req = $db->prepare('SELECT id, title, content, STR_TO_DATE(created_at, "%d/%m/%Y %H%i%s") AS creation_date_fr FROM post WHERE id = ? ORDER BY creation_date_fr DESC');
         $req->bindParam(1, $id, PDO::PARAM_INT);
@@ -20,7 +20,7 @@ class ChaptersManager extends Manager
         return $req->fetch();
     }
 
-    public function getLastPost() {
+    public function getLastPost() { 
 
         $db = $this->dbConnect();
         $lastpost = $db->query('SELECT title, content, created_at FROM post ORDER BY id DESC LIMIT 1');

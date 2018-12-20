@@ -5,7 +5,7 @@
 	<div class="container-fluid" id="author_section">
 		<div class="row">
 			<div class="col mt-5 mb-5">
-				<span class="fastpres"> A propos de l'auteur </span> </br></br>
+				<h4> <span class="fastpres"> A propos de l'auteur </span> </h4> </br></br>
 				<span class="gras"> Jean Forteroche </span><br>
 				Je suis né le 6 juillet 1972 dans le 14e arrondissement de Paris, écrivain français, qui a obtenu le prix Goncourt des lycéens et le prix des libraires avec La Mort du roi Tsongor en 2003, puis le prix Goncourt pour mon roman Le Soleil des Scorta, en 2004.
 				<br><br>
@@ -29,4 +29,4 @@
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require("/../backEnd/AdminTemplate.php") ?>
+<?php require("view/backEnd/AdminTemplate.php"); ?>

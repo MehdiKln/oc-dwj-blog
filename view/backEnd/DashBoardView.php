@@ -27,7 +27,7 @@ $title = "Administration" ?>
 
   <!--------------------------- SIDEBAR ------------------------------->
   <div class="row mt-3 mr-2">
-    <div class="col-2">
+    <div class="col-lg-2 col-md-12">
       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
           aria-controls="v-pills-home" aria-selected="true">Admin Home</a>
@@ -41,7 +41,7 @@ $title = "Administration" ?>
     </div>
 
     <!------------------------ CONTENU (à droite de la SIDEBAR) ------------------------------------>
-    <div class="col-10">
+    <div class="col-lg-10 col-md-12 mt-3">
       <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active admin_home" id="v-pills-home" role="tabpanel"
           aria-labelledby="v-pills-home-tab"> <span class="h3"> Accueil & Statistiques </span> <br>
@@ -70,7 +70,7 @@ $title = "Administration" ?>
               </div>
             </div>
         </div>
-
+        <!------------------------ NOUVEAU POST ------------------------------------>
         <div class="tab-pane fade mt-3 ml-2 admin_newpost" id="v-pills-profile" role="tabpanel"
           aria-labelledby="v-pills-profile-tab">
             <h3><span class="h3"> Nouveau Post </span></h3><br>
@@ -85,7 +85,7 @@ $title = "Administration" ?>
                 </form>
               </div>
         </div>
-
+        <!------------------------ AFFICHAGE POSTS ------------------------------------>
         <div class="tab-pane fade admin_post" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
           <?php 
           $listTitles = $_SESSION["dropdown"];
@@ -94,7 +94,7 @@ $title = "Administration" ?>
             <?= nl2br(htmlspecialchars($listTitle['title'])) ?></a>
             <?php } ?>
         </div>
-
+        <!------------------------ COMMENTAIRES SIGNALES ------------------------------------>
         <div class="tab-pane fade admin_signaled mt-3 ml-2" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
           <span class="h3">Commentaires signalés</span>
             <div class="mt-3 ml-3">
@@ -122,4 +122,4 @@ $title = "Administration" ?>
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require("AdminTemplate.php") ?>
+<?php require("view/backEnd/AdminTemplate.php"); ?>

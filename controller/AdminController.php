@@ -7,7 +7,7 @@ session_start();
 require_once("model/ChaptersManager.php");
 require_once("model/ReportManager.php");
 
-function viewDashboard()
+function viewDashboard() // affichage administration
 {   
     $reportManager = new ReportManager();
     $reports = $reportManager->getReports();
@@ -36,7 +36,7 @@ function newPost() {
         
 }
 
-function displayUpdate() {
+function displayUpdate() { // affichage modification
 
     $ChaptersManager = new ChaptersManager();
     $post = $ChaptersManager->findWithId($_GET['id']);

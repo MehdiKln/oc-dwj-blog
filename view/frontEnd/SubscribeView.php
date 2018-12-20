@@ -42,4 +42,4 @@ if ($add == 1) {
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require("/../backEnd/AdminTemplate.php") ?>
+<?php require("view/backEnd/AdminTemplate.php"); ?>

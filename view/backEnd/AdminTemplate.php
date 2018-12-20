@@ -22,7 +22,7 @@
  <?= $content ?>
 </body>
 
-<footer class="footer">
+<footer class="footer sticky-bottom">
 	<div class="container-fluid">
 		<div class="row text-center">
 			<div class="col-12 py-2" id="mycol">

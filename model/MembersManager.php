@@ -13,7 +13,7 @@ class MembersManager extends Manager {
         return $newMember;
     }
 
-    public function checkMail($mail)
+    public function checkMail($mail) // vérification pour qu'il n'y ai pas 2x le même mail dans la base de données (puisque mail = id de login)
     {
         $db = $this->dbConnect();
         $reqmail = $db->prepare("SELECT * FROM user WHERE mail = ?");
@@ -22,7 +22,7 @@ class MembersManager extends Manager {
         return $reqmail;
     }
 
-    public function getMembers($mailconnect, $passconnect)
+    public function getMembers($mailconnect, $passconnect) // récupération des informations de l'utilisateur 
     {
       $db = $this->dbConnect();
 

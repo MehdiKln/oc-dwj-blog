@@ -6,16 +6,16 @@ if(!isset($_SESSION))
 
 require_once('model/ChaptersManager.php');
 
-function home()
+function home() // affichage Accueil
 {
 	$ChaptersManager = new ChaptersManager();
 	$lastPost = $ChaptersManager->getLastPost();
-	saveChaptersTitlesOnSession();
+	saveChaptersTitlesOnSession(); // appel à la fonction de sauvegarde des chapitres en session dès l'ouverture de la page d'accueil
 
 	require('view/frontEnd/indexview.php');
 }
 
-function saveChaptersTitlesOnSession()
+function saveChaptersTitlesOnSession() // sauvegarde des chapitres en session pour le dropdown
 {
 	$ChaptersManager = new ChaptersManager(); 
     $getPosts = $ChaptersManager->getPosts(); 

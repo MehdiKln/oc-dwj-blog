@@ -121,7 +121,7 @@ button {
 }
 
 .admin_home {
-	margin-bottom: 800px;
+	margin-bottom: 700px;
 }
 
 .admin_post {
@@ -130,6 +130,10 @@ button {
 
 .admin_signaled {
 	margin-bottom: 800px;
+}
+
+#comment_section {
+	margin-bottom: 150px;
 }
 
 #admin_presentation {
@@ -183,3 +187,44 @@ button {
 .panel-numbers {
 	font-size: 2.5em;
 }
+
+#comment {
+	width: 1000px;
+}
+
+@media (max-width: 1200px) {
+
+    .float-right {
+        float: none !important;
+    }
+
+    #comment {
+	width: 600px;
+	}
+
+}
+
+@media (max-width: 800px) {
+	#comment {
+	width: 300px;
+	}
+
+	.home_title {
+		font-size: 0.7em;
+	}
+
+	.admin_home {
+	margin-bottom: 200px;
+	}
+
+	.admin_post {
+	margin-bottom: 400px;
+	}
+
+	.admin_signaled {
+	margin-bottom: 300px;
+	}
+}
+
+
+

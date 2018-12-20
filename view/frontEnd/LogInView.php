@@ -25,4 +25,4 @@ $erreur = isset($_GET['erreur']) ? $_GET['erreur'] : null;
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require("/../backEnd/AdminTemplate.php") ?>
+<?php require("view/backEnd/AdminTemplate.php"); ?>

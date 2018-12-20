@@ -14,7 +14,7 @@ class ReportManager extends Manager
             return $reported;
       }
 
-      public function getReports()
+      public function getReports() // récupération des commentaires signalés en fonction de nombres de signalement
       {
             $db = $this->dbConnect();
             $results = array();

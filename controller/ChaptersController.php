@@ -2,7 +2,7 @@
 
 require_once('model/ChaptersManager.php');
 
-function show()
+function show() // affichage vue chapitre + commentaires
 {   
     $ChaptersManager = new ChaptersManager(); 
     $post = $ChaptersManager->findWithId($_GET['id']);

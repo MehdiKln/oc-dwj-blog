@@ -2,7 +2,7 @@
 
 function author()
 {
-   require('view/frontEnd/authorview.php');
+   require('view/frontEnd/AuthorView.php');
 }
 
 ?>
