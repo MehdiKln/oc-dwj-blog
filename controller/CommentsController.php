@@ -12,13 +12,17 @@ function comments()
 
 function addComment($post_id, $content, $user_id)
 {
-      $CommentsManager = new CommentsManager();
-      $newComment = $CommentsManager->postComment($post_id, $content, $user_id);
+      if(empty(trim($content)))
+      {
+    // Its empty so throw a validation error
+            Header('Location: index.php?action=show&id= ' . $post_id . '&new-comment=empty'); 
+      }
+      else
+      {  $CommentsManager = new CommentsManager();
+         $newComment = $CommentsManager->postComment($post_id, $content, $user_id);
 
-      if ($newComment === false) {
-            throw new Exception("Impossible d'ajouter le commentaire !");
-      } else {
-            Header('Location: index.php?action=show&id= ' . $post_id . '&new-comment=success');
+         Header('Location: index.php?action=show&id= ' . $post_id . '&new-comment=success');
+    // Input has some text and is not empty.. process accordingly.. 
       }
 }
 

@@ -18,6 +18,8 @@ $title = "Bienvenue sur le site de Jean Forteroche";
 						echo $_SESSION["message"];
 					} elseif (isset($_GET['new-comment']) &&  $_GET['new-comment'] == 'success') {
                        	echo "<p class='green'> Votre commentaire a bien été ajouté ! <p>";
+                    } elseif (isset($_GET['new-comment']) &&  $_GET['new-comment'] == 'empty') {
+                       	echo "<p class='red'> Votre commentaire est vide ! <p>";
                     }
  				?>
 			</div>

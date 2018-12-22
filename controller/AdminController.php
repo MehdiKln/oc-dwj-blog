@@ -41,7 +41,7 @@ function displayUpdate() { // affichage modification
     $ChaptersManager = new ChaptersManager();
     $post = $ChaptersManager->findWithId($_GET['id']);
 
-    require('view/backend/updatePostView.php');
+    require('view/backEnd/updatePostView.php');
 }
 
 function submitUpdate($title, $content, $postId) 
